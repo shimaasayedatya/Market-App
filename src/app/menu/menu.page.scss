@@ -1,0 +1,22 @@
+.active-item {
+    border-left: 8px solid var(--ion-color-primary);
+}
+
+ion-menu {
+    --ion-background-color: var(--ion-color-tertiary);
+    --ion-text-color: var(--ion-color-primary-contrast);
+  
+    ion-toolbar {
+      --background: var(--ion-color-primary);
+    }
+  
+    ion-list {
+      background: transparent;
+    }
+
+    ion-icon {
+        color: rgba(var(--ion-text-color-rgb,255,255,255),.48);
+
+    }
+  }
+

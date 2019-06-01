@@ -1,0 +1,41 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>product-details</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/menu/products"></ion-back-button>
+          <!-- <ion-icon name="arrow-back"></ion-icon> -->
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-row>
+    <ion-col>
+      <img src="{{product.product_img}}">
+      <div class="list card">
+          <div class="item item-body">
+            <div>
+              <h1>{{product.name}}</h1>
+              
+  
+            </div>
+      
+          </div>
+      
+        </div>
+     
+    </ion-col>
+  </ion-row>
+</ion-card>
+
+
+
+
+</ion-content>

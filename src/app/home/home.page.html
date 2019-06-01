@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color="white">
+      <ion-buttons slot="start">
+        <ion-menu-button>
+          
+  
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+      <ion-icon name="search" slot="end"></ion-icon>
+    <ion-icon name="cart" slot="end"></ion-icon>
+
+
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-slides pager autoplay="5000" loop="true" speed="3000">
+    <ion-slide *ngFor="let image of ImageArray">
+     
+        <img src="{{image.image}}">
+     
+     
+    </ion-slide>
+  </ion-slides>
+
+<!-- <ion-row>
+  <ion-col>
+      <ion-card class="category-block">
+          <img src="{{items[0].category_img}}" (click)="addItem(items[0].products)">
+          <div class="card-title">{{items[0].name}}</div>
+           
+        </ion-card>
+  </ion-col>
+  <ion-col>
+      <ion-card  class="category-block">
+          <img src="{{items[1].category_img}}" (click)="addItem(items[1].products)">
+          <div class="card-title">{{item[1].name}}</div>
+           
+        </ion-card>
+  </ion-col>
+</ion-row> -->
+
+
+
+      <ion-grid *ngFor="let item of items" class="category-block" color="light">
+          <ion-row size="6" size-lg offset="6">
+            <ion-col >
+        <img src="{{item.category_img}}" (click)="addItem(item.products)">
+        <div class="card-title">{{item.name}}</div>
+      </ion-col>
+      </ion-row>
+      </ion-grid>
+    
+
+</ion-content>

@@ -1,0 +1,50 @@
+<header>     
+      <ion-toolbar>
+        <ion-title></ion-title>
+
+        <ion-icon name="search" slot="end"></ion-icon>
+        
+      
+          <ion-icon name="cart" slot="end"></ion-icon>
+      
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/menu/home"></ion-back-button>
+
+          </ion-buttons>
+      </ion-toolbar>
+   </header>
+
+<ion-content  class="has-header" >
+
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let item of products"  col-6 no-padding>
+          <ion-card>
+            <ion-card-header>
+              <h1>{{item.name}}</h1>
+              <img src="{{item.product_img}}"  (click)="addProductDetails(item)">
+            </ion-card-header>
+            <ion-card-content class="flixline">
+              <p>{{item.weight}}</p>
+            <p>{{item.price}} </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+
+    <ion-toolbar color="primary">
+    <ion-footer>
+        <ion-row>
+            <ion-col no-padding>
+                <button no-margin ion-button full large color="primary">Sort by</button>
+            </ion-col>
+            <ion-col no-padding>
+                <button no-margin ion-button full large color="danger">Filter</button>
+            </ion-col>
+        </ion-row>
+    </ion-footer>
+  </ion-toolbar>
